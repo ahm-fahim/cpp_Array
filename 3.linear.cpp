@@ -5,15 +5,17 @@ int main()
 {
     int numArr[5] = {1, 4, 5, 6, 3};
 
-    int mx = numArr[0]; 
+    int key = 4;
+    int ans = -1;
 
     for (int i = 0; i < sizeof(numArr) / sizeof(numArr[0]); i++)
     {
-        if(mx < numArr[i]){
-            mx = numArr[i];
+        if(numArr[i] == key){
+            ans = i;
+            break;
         }
     }
-    cout << mx << endl;
+    cout << ans << endl;
 
     return 0;
 }
